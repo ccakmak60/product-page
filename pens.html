@@ -1,0 +1,20 @@
+---
+layout: product
+title: Products
+---
+<div class="grid">
+  {% for product in site.products %}
+    {% if product.type == 'highlighters' or product.type == 'pens' %}
+  <div class="grid-item">
+    <img class="grid-image" src="{{ product.photo }}" alt="{{ product.name }}" />
+    <p class="grid-item-name mt-2">
+      {{ product.name }}
+    </p>
+    <span class="price">${{ product.price }}</span>
+    <p class="grid-description">
+      {{ product.description }}
+    </p>
+    </div>
+    {% endif %}
+  {% endfor %}
+</div>

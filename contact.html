@@ -1,0 +1,51 @@
+---
+layout: default
+title: Contact
+---
+<main class="no-bg animsition">
+  <div class="container">
+    <div class="row">
+      <div class="col-10 col-md-7 mx-auto mt-4 mb-3 ">
+        <p class="text-center contact">
+          Contact Us
+        </p>
+        <hr/>
+        <!-- form -->
+        <form id="contact" >
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="firstName">First Name</label>
+              <input type="text" class="form-control" name="name" id="firstName" placeholder="First Name" required>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="lastName">Last Name</label>
+              <input type="text" class="form-control" name="surname" id="lastName" placeholder="Last Name" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="inputEmail">Email</label>
+            <input type="email" class="form-control" id="inputEmail" placeholder="Email" required>
+          </div>
+          <div class="form-group">
+            <label for="commentTopic">Topic</label>
+            <select class="custom-select" id="commentTopic" name="customerTopic">
+              <option selected>Choose...</option>
+              <option value="customerService">Customer Service</option>
+              <option value="shipping">Shipping Issues</option>
+              <option value="pr">PR/ Marketing/ Interview</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="customerComment">Comments</label>
+            <textarea class="form-control" name="comment" rows="3" id="customerComment" required></textarea >
+          </div>
+          <div class="text-center">
+            <button type="submit" class="btn btn-dark">Submit</button>
+          </div>
+        </form>
+        <!-- /form -->
+      </div>
+    </div>
+  </div>
+</main>

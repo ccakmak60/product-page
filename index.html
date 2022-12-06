@@ -1,0 +1,47 @@
+---
+layout: default
+title: Home
+first: Back to School Special!
+second: 25% Off First Order
+---
+<main>
+  <!-- main slider -->
+  <div class="main-slider mb-3 mt-3">
+    <div class="first-slide ">
+
+      <div class="center">
+        <p class='text-center align-middle'>
+          {{ page.first }}
+        </p>
+      </div>
+
+    </div>
+    <div class='second-slide '>
+
+      <div class="center">
+        <p class='text-center justify-content-center'>
+          {{ page.second }}
+        </p>
+      </div>
+
+    </div>
+  </div>
+  <!-- /main slider -->
+  <!-- product slider -->
+  <p class="best-sell text-center lead text-light mt-3">
+    Best Sellers
+  </p>
+  {% assign sort_product = site.products | sort:"price" %}
+  <div class="slider dark-bg">
+    {% for product in sort_product %}
+      {% if product.slider == true %}
+      <div class="slide">
+        <a href="products.html">
+          <img src="{{ product.photo }}" alt="{{ product.name }}"/>
+        </a>
+      </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+  <!-- /product slider -->
+</main>

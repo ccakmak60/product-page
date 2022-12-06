@@ -1,0 +1,18 @@
+---
+layout: product
+title: Products
+---
+<div class="grid animsition">
+  {% for product in site.products %}
+  <div class="grid-item">
+    <img class="grid-image" src="{{ product.photo }}" alt="{{ product.name }}" />
+    <p class="grid-item-name mt-2">
+      {{ product.name }}
+    </p>
+    <span class="price">${{ product.price }}</span>
+    <p class="grid-description">
+      {{ product.description }}
+    </p>
+    </div>
+  {% endfor %}
+</div>
